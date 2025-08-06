@@ -474,7 +474,7 @@ namespace Core.ECS.SaveLoad
                     }
 
                     var migratedDoc = _saveMigrationService.ApplyMigrations(
-                        type.Name,
+                        type.FullName,
                         componentData.OriginalVersion ?? "0.0.1",
                         _saveLoadParameters.GameVersion,
                         componentData.BsonData);
